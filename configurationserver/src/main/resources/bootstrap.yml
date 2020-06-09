@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/felipejsm/config-repo/
+          search-paths: licensingservice
+          username: secret
+          password: secret
+          skip-ssl-validation: true
+        encrypt:
+          enabled: false
+  application:
+    name: configserver
